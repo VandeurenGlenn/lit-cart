@@ -1,0 +1,52 @@
+{
+  "name": "lit-cart",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./exports/cart.js",
+      "types": "./exports/types/cart.d.ts",
+      "browser": "./exports/browser/cart.js"
+    },
+    "./cart": {
+      "import": "./exports/cart.js",
+      "types": "./exports/types/cart.d.ts",
+      "browser": "./exports/browser/cart.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "demo": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VandeurenGlenn/lit-cart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VandeurenGlenn/lit-cart/issues"
+  },
+  "homepage": "https://github.com/VandeurenGlenn/lit-cart#readme",
+  "dependencies": {
+    "@lit-labs/context": "^0.3.1",
+    "@material/web": "^1.0.0-pre.7",
+    "@vandeurenglenn/flex-elements": "^0.2.0",
+    "lit": "^2.7.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/uuid": "^9.0.1",
+    "koa": "^2.14.2",
+    "koa-compress": "^5.1.1",
+    "koa-static": "^5.0.0",
+    "rollup": "^3.21.5",
+    "tslib": "^2.5.0"
+  }
+}
